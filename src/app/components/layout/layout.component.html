@@ -1,0 +1,10 @@
+<div id="content">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <nav id="navbar">
+    <a routerLink="/sobre" routerLinkActive="active">Sobre</a>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Mapa</a>
+    <a routerLink="/foto" routerLinkActive="active">Foto</a>
+  </nav>
+</div>

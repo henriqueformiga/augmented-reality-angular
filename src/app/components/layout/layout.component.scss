@@ -1,0 +1,40 @@
+#navbar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+
+  a {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    &:is(.active, :hover) {
+      background-color: var(--secondary-color);
+      color: var(--primary-color)
+    }
+  }
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+
+  main {
+    z-index: 10;
+    height: calc(100vh - 50px); // 50px - navbar height
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    position: relative;
+
+  }
+}
